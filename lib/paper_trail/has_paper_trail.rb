@@ -138,7 +138,10 @@ module PaperTrail
       end
 
       def object_to_string(object)
-        object.attributes.to_yaml
+        puts "ORIGINAL ATTRIBS #{object.attributes}"
+        yamld = object.attributes.to_yaml
+        puts "YAMLD #{yamld}"
+        yamld
       end
 
       def changed_notably?
